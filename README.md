@@ -5,7 +5,7 @@ https://www.atlassian.com/try/cloud/signup
 
 # Task
 1. Fork this repository and send link to it to radek@getint.io after task completion
-2. Implement `JiraSynchronizer.moveTasksToOtherProject` method. Search for 5 tickets in one project, and move them to the other project within same Jira instance.
+2. Implement `JiraSynchronizer.moveTasksToOtherProject` method. Search for 5 tickets in one project, and move them (recreate them) to other project within same Jira instance.
 When syncing tickets please include following fields:
 - summary (title)
 - description
