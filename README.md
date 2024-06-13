@@ -12,6 +12,7 @@ When syncing tickets please include following fields:
 - priority
 Bonus points for syncing status and comments.
 3. Please complete task within 7 days from the day you received it
+4. Pleaase use provided library (apache) for HTTP communication
   
 API endpoints exposed by Jira you can find here:
 https://developer.atlassian.com/cloud/jira/software/rest/
