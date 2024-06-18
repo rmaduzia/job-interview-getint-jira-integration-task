@@ -25,3 +25,8 @@ JIRA_API_TOKEN  // set your api key
 JIRA_USER_NAME // set your jira user name
 
 JIRA_URL // set url to your jira instance
+
+Values definined inside application.properties:
+SOURCE PROJECT = P2
+TARGET PROJECT = 3
+JIRA TICKETS TO MOVE = 5
