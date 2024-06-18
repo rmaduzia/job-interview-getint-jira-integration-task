@@ -16,3 +16,12 @@ Bonus points for syncing status and comments.
   
 API endpoints exposed by Jira you can find here:
 https://developer.atlassian.com/cloud/jira/software/rest/
+
+# Before start:
+You have to set up environment variable:
+
+JIRA_API_TOKEN  // set your api key
+
+JIRA_USER_NAME // set your jira user name
+
+JIRA_URL // set url to your jira instance
