@@ -28,5 +28,7 @@ JIRA_URL // set url to your jira instance
 
 Values definined inside application.properties:
 SOURCE PROJECT = P2
+
 TARGET PROJECT = 3
+
 JIRA TICKETS TO MOVE = 5
