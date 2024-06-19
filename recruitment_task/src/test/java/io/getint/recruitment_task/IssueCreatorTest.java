@@ -1,8 +1,11 @@
 package io.getint.recruitment_task;
 
-import static org.junit.Assert.assertEquals;
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Before;
@@ -12,6 +15,8 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 public class IssueCreatorTest {
@@ -46,4 +51,75 @@ public class IssueCreatorTest {
         String expectedRequestBody = new JSONObject().put("issueUpdates", issues).toString();
         assertEquals(expectedRequestBody, requestBodyCaptor.getValue());
     }
+
+    @Test
+    public void verifyRequestToCreateJiraTickets() throws IOException {
+
+        JSONArray jsonArrayOfIssues = loadJsonExampleData();
+
+        issueCreator.createIssueInTargetProject(jsonArrayOfIssues);
+
+        ArgumentCaptor<String> urlCaptor = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<String> requestBodyCaptor = ArgumentCaptor.forClass(String.class);
+        Mockito.verify(mockJiraApiClient, Mockito.times(1)).post(urlCaptor.capture(), requestBodyCaptor.capture());
+
+        JSONObject requestBody = new JSONObject(requestBodyCaptor.getValue());
+        JSONArray issueUpdates = requestBody.getJSONArray("issueUpdates");
+
+        validateIssueUpdates(issueUpdates);
+    }
+
+    private void validateIssueUpdates(JSONArray issueUpdates) {
+        String expectedProject = "TARGET_PROJECT";
+        String expectedIssueType = "Story";
+
+        List<String> listOfTasksName = List.of("Task 7", "Task 6");
+        List<String> listOfTasksDescriptions = List.of("task 7 description", "task 6 description");
+
+        for(int i = 0; i < issueUpdates.length(); i++) {
+
+            JSONObject issues = issueUpdates.getJSONObject(i);
+            JSONObject fields = new JSONObject(issues.getJSONObject("fields").toString());
+
+            String actualProject = fields.getJSONObject("project").getString("key");
+            String actualSummary = fields.getString("summary");
+            String actualDescriptionText = extractDescriptionText(fields);
+            String actualIssueType = fields.getJSONObject("issuetype").getString("name");
+
+            assertEquals(expectedProject, actualProject);
+            assertEquals(listOfTasksName.get(i), actualSummary);
+            assertEquals(listOfTasksDescriptions.get(i), actualDescriptionText);
+            assertEquals(expectedIssueType, actualIssueType);
+        }
+    }
+
+    private String extractDescriptionText(JSONObject fields) {
+        return fields.getJSONObject("description")
+            .getJSONArray("content")
+            .getJSONObject(0)
+            .getJSONArray("content")
+            .getJSONObject(0)
+            .getString("text");
+    }
+
+    private JSONArray loadJsonExampleData() {
+
+        InputStream inputStream = IssueCreatorTest.class.getClassLoader().getResourceAsStream("exampleJiraApiResponse.json");
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+
+            StringBuilder jsonStringBuilder = new StringBuilder();
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                jsonStringBuilder.append(line);
+            }
+
+            return new JSONArray(jsonStringBuilder.toString());
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

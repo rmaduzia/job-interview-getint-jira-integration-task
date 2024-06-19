@@ -1,0 +1,404 @@
+[
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+    "self": "https://myNick.atlassian.net/rest/api/3/issue/10006",
+    "id": "10006",
+    "fields": {
+      "statuscategorychangedate": "2024-06-16T20:10:59.259+0200",
+      "issuetype": {
+        "avatarId": 10315,
+        "hierarchyLevel": 0,
+        "name": "Story",
+        "self": "https://myNick.atlassian.net/rest/api/3/issuetype/10013",
+        "description": "Funkcja lub cecha wyrażona jako cel użytkownika.",
+        "entityId": "7c5f1b95-1fe4-4b93-8318-86822f106a87",
+        "id": "10013",
+        "iconUrl": "https://myNick.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+        "subtask": false
+      },
+      "timespent": null,
+      "customfield_10030": null,
+      "project": {
+        "simplified": true,
+        "avatarUrls": {
+          "48x48": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421",
+          "24x24": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=small",
+          "16x16": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=xsmall",
+          "32x32": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=medium"
+        },
+        "name": "project-2",
+        "self": "https://myNick.atlassian.net/rest/api/3/project/10002",
+        "id": "10002",
+        "projectTypeKey": "software",
+        "key": "P2"
+      },
+      "customfield_10032": null,
+      "fixVersions": [],
+      "customfield_10033": [],
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "customfield_10035": null,
+      "resolution": null,
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": null,
+      "workratio": -1,
+      "watches": {
+        "self": "https://myNick.atlassian.net/rest/api/3/issue/P2-7/watchers",
+        "isWatching": true,
+        "watchCount": 1
+      },
+      "lastViewed": "2024-06-17T17:05:47.004+0200",
+      "created": "2024-06-16T20:10:18.055+0200",
+      "customfield_10020": null,
+      "customfield_10021": null,
+      "customfield_10022": null,
+      "customfield_10023": null,
+      "priority": {
+        "name": "Medium",
+        "self": "https://myNick.atlassian.net/rest/api/3/priority/3",
+        "iconUrl": "https://myNick.atlassian.net/images/icons/priorities/medium.svg",
+        "id": "3"
+      },
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": null,
+      "labels": [],
+      "customfield_10016": 5,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "PLUGIN_LICENSE_ERROR",
+          "message": "Pole Łącze nadrzędne jest dostępne tylko dla użytkowników Jira Premium."
+        }
+      },
+      "customfield_10019": "0|i00003:",
+      "aggregatetimeoriginalestimate": null,
+      "timeestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": null,
+      "updated": "2024-06-17T17:05:19.001+0200",
+      "status": {
+        "name": "Do zrobienia",
+        "self": "https://myNick.atlassian.net/rest/api/3/status/10024",
+        "description": "",
+        "iconUrl": "https://myNick.atlassian.net/",
+        "id": "10024",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "name": "Do zrobienia",
+          "self": "https://myNick.atlassian.net/rest/api/3/statuscategory/2",
+          "id": 2,
+          "key": "new"
+        }
+      },
+      "components": [],
+      "customfield_10050": null,
+      "customfield_10051": null,
+      "timeoriginalestimate": null,
+      "customfield_10052": null,
+      "customfield_10053": null,
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "task 7 description",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "customfield_10010": null,
+      "customfield_10054": null,
+      "customfield_10055": null,
+      "customfield_10056": null,
+      "customfield_10057": null,
+      "customfield_10014": null,
+      "customfield_10058": null,
+      "customfield_10015": null,
+      "customfield_10005": null,
+      "customfield_10049": null,
+      "customfield_10006": null,
+      "security": null,
+      "customfield_10007": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "summary": "Task 7",
+      "creator": {
+        "accountId": "5f4c968cfe0a46004de01a3c",
+        "emailAddress": "exampleMial@com",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "24x24": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "16x16": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "32x32": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"
+        },
+        "displayName": "firstName lastName",
+        "accountType": "atlassian",
+        "self": "https://myNick.atlassian.net/rest/api/3/user?accountId=5f4c968cfe0a46004de01a3c",
+        "active": true,
+        "timeZone": "Europe/Warsaw"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10041": null,
+      "customfield_10042": null,
+      "customfield_10043": [],
+      "reporter": {
+        "accountId": "5f4c968cfe0a46004de01a3c",
+        "emailAddress": "exampleMial@com",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "24x24": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "16x16": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "32x32": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"
+        },
+        "displayName": "firstName lastName",
+        "accountType": "atlassian",
+        "self": "https://myNick.atlassian.net/rest/api/3/user?accountId=5f4c968cfe0a46004de01a3c",
+        "active": true,
+        "timeZone": "Europe/Warsaw"
+      },
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "total": 0,
+        "progress": 0
+      },
+      "customfield_10001": null,
+      "customfield_10045": null,
+      "customfield_10002": null,
+      "customfield_10046": null,
+      "customfield_10047": null,
+      "customfield_10003": null,
+      "customfield_10048": null,
+      "customfield_10004": null,
+      "customfield_10038": null,
+      "customfield_10039": null,
+      "environment": null,
+      "duedate": null,
+      "progress": {
+        "total": 0,
+        "progress": 0
+      },
+      "votes": {
+        "hasVoted": false,
+        "self": "https://myNick.atlassian.net/rest/api/3/issue/P2-7/votes",
+        "votes": 0
+      }
+    },
+    "key": "P2-7"
+  },
+  {
+    "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+    "self": "https://myNick.atlassian.net/rest/api/3/issue/10005",
+    "id": "10005",
+    "fields": {
+      "statuscategorychangedate": "2024-06-16T20:02:45.671+0200",
+      "issuetype": {
+        "avatarId": 10315,
+        "hierarchyLevel": 0,
+        "name": "Story",
+        "self": "https://myNick.atlassian.net/rest/api/3/issuetype/10013",
+        "description": "Funkcja lub cecha wyrażona jako cel użytkownika.",
+        "entityId": "7c5f1b95-1fe4-4b93-8318-86822f106a87",
+        "id": "10013",
+        "iconUrl": "https://myNick.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+        "subtask": false
+      },
+      "timespent": null,
+      "customfield_10030": null,
+      "project": {
+        "simplified": true,
+        "avatarUrls": {
+          "48x48": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421",
+          "24x24": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=small",
+          "16x16": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=xsmall",
+          "32x32": "https://myNick.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10421?size=medium"
+        },
+        "name": "project-2",
+        "self": "https://myNick.atlassian.net/rest/api/3/project/10002",
+        "id": "10002",
+        "projectTypeKey": "software",
+        "key": "P2"
+      },
+      "customfield_10032": null,
+      "fixVersions": [],
+      "customfield_10033": [],
+      "customfield_10034": null,
+      "aggregatetimespent": null,
+      "customfield_10035": null,
+      "resolution": null,
+      "customfield_10036": null,
+      "customfield_10037": null,
+      "customfield_10027": null,
+      "customfield_10028": null,
+      "customfield_10029": null,
+      "resolutiondate": null,
+      "workratio": -1,
+      "watches": {
+        "self": "https://myNick.atlassian.net/rest/api/3/issue/P2-6/watchers",
+        "isWatching": true,
+        "watchCount": 1
+      },
+      "lastViewed": null,
+      "created": "2024-06-16T20:02:45.337+0200",
+      "customfield_10020": null,
+      "customfield_10021": null,
+      "customfield_10022": null,
+      "priority": {
+        "name": "Medium",
+        "self": "https://myNick.atlassian.net/rest/api/3/priority/3",
+        "iconUrl": "https://myNick.atlassian.net/images/icons/priorities/medium.svg",
+        "id": "3"
+      },
+      "customfield_10023": null,
+      "customfield_10024": null,
+      "customfield_10025": null,
+      "customfield_10026": null,
+      "labels": [],
+      "customfield_10016": null,
+      "customfield_10017": null,
+      "customfield_10018": {
+        "hasEpicLinkFieldDependency": false,
+        "showField": false,
+        "nonEditableReason": {
+          "reason": "PLUGIN_LICENSE_ERROR",
+          "message": "Pole Łącze nadrzędne jest dostępne tylko dla użytkowników Jira Premium."
+        }
+      },
+      "customfield_10019": "0|i00013:",
+      "aggregatetimeoriginalestimate": null,
+      "timeestimate": null,
+      "versions": [],
+      "issuelinks": [],
+      "assignee": null,
+      "updated": "2024-06-16T20:02:45.714+0200",
+      "status": {
+        "name": "Do zrobienia",
+        "self": "https://myNick.atlassian.net/rest/api/3/status/10024",
+        "description": "",
+        "iconUrl": "https://myNick.atlassian.net/",
+        "id": "10024",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "name": "Do zrobienia",
+          "self": "https://myNick.atlassian.net/rest/api/3/statuscategory/2",
+          "id": 2,
+          "key": "new"
+        }
+      },
+      "components": [],
+      "customfield_10050": null,
+      "customfield_10051": null,
+      "timeoriginalestimate": null,
+      "customfield_10052": null,
+      "customfield_10053": null,
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "task 6 description",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "customfield_10054": null,
+      "customfield_10010": null,
+      "customfield_10055": null,
+      "customfield_10056": null,
+      "customfield_10057": null,
+      "customfield_10058": null,
+      "customfield_10014": null,
+      "customfield_10015": null,
+      "customfield_10049": null,
+      "customfield_10005": null,
+      "customfield_10006": null,
+      "customfield_10007": null,
+      "security": null,
+      "customfield_10008": null,
+      "customfield_10009": null,
+      "aggregatetimeestimate": null,
+      "summary": "Task 6",
+      "creator": {
+        "accountId": "5f4c968cfe0a46004de01a3c",
+        "emailAddress": "exampleMial@com",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "24x24": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "16x16": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "32x32": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"
+        },
+        "displayName": "firstName lastName",
+        "accountType": "atlassian",
+        "self": "https://myNick.atlassian.net/rest/api/3/user?accountId=5f4c968cfe0a46004de01a3c",
+        "active": true,
+        "timeZone": "Europe/Warsaw"
+      },
+      "subtasks": [],
+      "customfield_10040": null,
+      "customfield_10041": null,
+      "customfield_10042": null,
+      "reporter": {
+        "accountId": "5f4c968cfe0a46004de01a3c",
+        "emailAddress": "exampleMial@com",
+        "avatarUrls": {
+          "48x48": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "24x24": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "16x16": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png",
+          "32x32": "https://secure.gravatar.com/avatar/207ac556da215457e8a8f751f559e8ea?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"
+        },
+        "displayName": "firstName lastName",
+        "accountType": "atlassian",
+        "self": "https://myNick.atlassian.net/rest/api/3/user?accountId=5f4c968cfe0a46004de01a3c",
+        "active": true,
+        "timeZone": "Europe/Warsaw"
+      },
+      "customfield_10043": [],
+      "customfield_10044": null,
+      "aggregateprogress": {
+        "total": 0,
+        "progress": 0
+      },
+      "customfield_10001": null,
+      "customfield_10045": null,
+      "customfield_10002": null,
+      "customfield_10046": null,
+      "customfield_10047": null,
+      "customfield_10003": null,
+      "customfield_10004": null,
+      "customfield_10048": null,
+      "customfield_10038": null,
+      "customfield_10039": null,
+      "environment": null,
+      "duedate": null,
+      "progress": {
+        "total": 0,
+        "progress": 0
+      },
+      "votes": {
+        "hasVoted": false,
+        "self": "https://myNick.atlassian.net/rest/api/3/issue/P2-6/votes",
+        "votes": 0
+      }
+    },
+    "key": "P2-6"
+  }
+]
