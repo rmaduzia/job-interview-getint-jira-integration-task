@@ -71,10 +71,10 @@ public class IssueCreatorTest {
 
     private void validateIssueUpdates(JSONArray issueUpdates) {
         String expectedProject = "TARGET_PROJECT";
-        String expectedIssueType = "Story";
 
-        List<String> listOfTasksName = List.of("Task 7", "Task 6");
-        List<String> listOfTasksDescriptions = List.of("task 7 description", "task 6 description");
+        List<String> listOfTasksName = List.of("Task 8", "Task 7");
+        List<String> listOfTasksDescriptions = List.of("Task 8 description", "task 7 description");
+        List<String> ListOfExpectedIssueType = List.of ("Zadanie", "Story");
 
         for(int i = 0; i < issueUpdates.length(); i++) {
 
@@ -89,7 +89,7 @@ public class IssueCreatorTest {
             assertEquals(expectedProject, actualProject);
             assertEquals(listOfTasksName.get(i), actualSummary);
             assertEquals(listOfTasksDescriptions.get(i), actualDescriptionText);
-            assertEquals(expectedIssueType, actualIssueType);
+            assertEquals(ListOfExpectedIssueType.get(i), actualIssueType);
         }
     }
 

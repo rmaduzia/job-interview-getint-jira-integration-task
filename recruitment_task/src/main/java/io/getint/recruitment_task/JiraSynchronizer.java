@@ -28,6 +28,7 @@ public class JiraSynchronizer {
             jiraSynchronizer.moveTasksToOtherProject();
 
         } catch (Exception e) {
+            System.out.println("Issue happened, check logs");
             e.printStackTrace();
         }
     }

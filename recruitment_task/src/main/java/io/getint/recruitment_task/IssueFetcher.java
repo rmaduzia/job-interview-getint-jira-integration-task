@@ -15,7 +15,10 @@ public class IssueFetcher {
     }
 
     public JSONArray fetchIssues(String projectKey, int maxResults) throws IOException {
-        String response = jiraApiClient.get(endPointApi + projectKey + "&maxResults=" + maxResults);
+
+        String fieldsName = ListOfFieldsToCopy.getAllFieldsNames();
+
+        String response = jiraApiClient.get(endPointApi + projectKey + "&maxResults=" + maxResults + fieldsName);
         JSONObject responseJson = new JSONObject(response);
         return responseJson.getJSONArray("issues");
     }
