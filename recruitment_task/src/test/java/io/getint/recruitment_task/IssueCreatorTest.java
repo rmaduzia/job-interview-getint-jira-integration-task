@@ -16,6 +16,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static io.getint.recruitment_task.ListOfFieldsToCopy.DESCRIPTION_FIELD;
+import static io.getint.recruitment_task.ListOfFieldsToCopy.ISSUE_TYPE;
+import static io.getint.recruitment_task.ListOfFieldsToCopy.PROJECT_FIELD;
+import static io.getint.recruitment_task.ListOfFieldsToCopy.SUMMARY_FIELD;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -35,10 +39,10 @@ public class IssueCreatorTest {
         JSONArray issues = new JSONArray();
         JSONObject issue = new JSONObject();
         JSONObject fields = new JSONObject();
-        fields.put("summary", "Test summary");
-        fields.put("issuetype", new JSONObject().put("name", "Task"));
-        fields.put("project", new JSONObject().put("key", "TARGET_PROJECT"));
-        fields.put("description", "Test description");
+        fields.put(SUMMARY_FIELD.fieldName, "Test summary");
+        fields.put(ISSUE_TYPE.fieldName, new JSONObject().put("name", "Task"));
+        fields.put(PROJECT_FIELD.fieldName, new JSONObject().put("key", "TARGET_PROJECT"));
+        fields.put(DESCRIPTION_FIELD.fieldName, "Test description");
         issue.put("fields", fields);
         issues.put(issue);
 
@@ -81,10 +85,10 @@ public class IssueCreatorTest {
             JSONObject issues = issueUpdates.getJSONObject(i);
             JSONObject fields = new JSONObject(issues.getJSONObject("fields").toString());
 
-            String actualProject = fields.getJSONObject("project").getString("key");
-            String actualSummary = fields.getString("summary");
+            String actualProject = fields.getJSONObject(PROJECT_FIELD.fieldName).getString("key");
+            String actualSummary = fields.getString(SUMMARY_FIELD.fieldName);
             String actualDescriptionText = extractDescriptionText(fields);
-            String actualIssueType = fields.getJSONObject("issuetype").getString("name");
+            String actualIssueType = fields.getJSONObject(ISSUE_TYPE.fieldName).getString("name");
 
             assertEquals(expectedProject, actualProject);
             assertEquals(listOfTasksName.get(i), actualSummary);
@@ -94,7 +98,7 @@ public class IssueCreatorTest {
     }
 
     private String extractDescriptionText(JSONObject fields) {
-        return fields.getJSONObject("description")
+        return fields.getJSONObject(DESCRIPTION_FIELD.fieldName)
             .getJSONArray("content")
             .getJSONObject(0)
             .getJSONArray("content")
