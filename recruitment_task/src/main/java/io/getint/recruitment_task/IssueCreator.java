@@ -20,7 +20,7 @@ public class IssueCreator {
         this.targetProjectKey = targetProjectKey;
     }
 
-    public void createIssueInTargetProject(JSONArray issues) throws IOException {
+    public void createIssueInTargetProject(JSONArray issues) {
 
         JSONArray issueUpdates = new JSONArray();
 
@@ -43,6 +43,14 @@ public class IssueCreator {
         JSONObject requestBody = new JSONObject();
         requestBody.put("issueUpdates", issueUpdates);
 
-        jiraApiClient.post(ENDPOINT_URL, requestBody.toString());
+
+        try {
+            jiraApiClient.post(ENDPOINT_URL, requestBody.toString());
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+            throw new RuntimeException("Issue while creating tickets in target project");
+        }
+
+
     }
 }
