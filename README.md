@@ -27,8 +27,11 @@ JIRA_USER_NAME // set your jira user name
 JIRA_URL // set url to your jira instance
 
 Values definined inside application.properties:
+
 SOURCE PROJECT = P2
 
-TARGET PROJECT = 3
+TARGET PROJECT = P3
 
 JIRA TICKETS TO MOVE = 5
+
+USED THREADS TO CREATE TICKETS = 2

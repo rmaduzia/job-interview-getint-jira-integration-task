@@ -20,8 +20,7 @@ public class JiraSynchronizer {
     private static final String SOURCE_PROJECT_KEY = Config.get("jira.source.project.key");
     private static final String TARGET_PROJECT_KEY = Config.get("jira.target.project.key");
     private static final int NUMBER_OF_PROJECTS_TO_MOVE = Integer.parseInt(Config.get("jira.tickets.to-move"));
-
-    private static final int NUMBER_OF_CREATION_THREADS = 2;
+    private static final int NUMBER_OF_CREATION_THREADS = Integer.parseInt(Config.get("jira.threads.to-create-ticket"));
 
     public static void main(String[] args) {
         try {
@@ -78,21 +77,16 @@ public class JiraSynchronizer {
         System.out.println("JIRA TICKET CREATED");
     }
 
-    private List<JSONArray> splitIntoChunks(JSONArray issues) {
-        List<JSONArray> chunks = new ArrayList<>();
-        int totalIssues = issues.length();
-        int startIndex = 0;
+    public List<JSONArray> splitIntoChunks(JSONArray issues) {
+        int numberOfChunks = Math.min(NUMBER_OF_CREATION_THREADS, issues.length());
+        List<JSONArray> chunks = new ArrayList<>(numberOfChunks);
 
-        while (startIndex < totalIssues) {
-            int endIndex = Math.min(startIndex + 4, totalIssues);
+        for (int i = 0; i < numberOfChunks; i++) {
+            chunks.add(new JSONArray());
+        }
 
-            JSONArray chunk = new JSONArray();
-            for (int i = startIndex; i < endIndex; i++) {
-                chunk.put(issues.get(i));
-            }
-
-            chunks.add(chunk);
-            startIndex = endIndex;
+        for (int i = 0; i < issues.length(); i++) {
+            chunks.get(i % numberOfChunks).put(issues.get(i));
         }
 
         return chunks;
